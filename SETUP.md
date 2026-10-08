@@ -49,7 +49,7 @@ jupyter notebook
 
 Код курса пишется в файле Jupyter notebook (`.ipynb`).
 
-- Создать: в Jupyter New → Notebook → kernel Python 3.
+- Создать: в Jupyter New → Python 3 (ipykernel).
 - Запустить ячейку: `Shift + Enter`.
 
 ## API-ключ
