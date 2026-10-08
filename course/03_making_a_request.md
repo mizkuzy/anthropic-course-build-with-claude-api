@@ -27,7 +27,7 @@ load_dotenv()
 from anthropic import Anthropic
 
 client = Anthropic()
-model = "claude-sonnet-4-5"
+model = "claude-sonnet-5-5"  # в уроке claude-sonnet-4-5, для нашего ключа она даёт 404
 ```
 
 - `load_dotenv()` — читает `.env` и делает ключ доступным программе.
