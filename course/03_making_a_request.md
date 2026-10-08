@@ -20,6 +20,8 @@ ANTHROPIC_API_KEY="ключ"
 
 ## 3. Клиент
 
+Модель изменена: в уроке `claude-sonnet-4-5`, но она устарела, и API на неё отвечает ошибкой 404, поэтому используем `claude-sonnet-5-5`.
+
 ```python
 from dotenv import load_dotenv
 load_dotenv()
@@ -27,7 +29,7 @@ load_dotenv()
 from anthropic import Anthropic
 
 client = Anthropic()
-model = "claude-sonnet-5-5"  # в уроке claude-sonnet-4-5, для нашего ключа она даёт 404
+model = "claude-sonnet-5-5"
 ```
 
 - `load_dotenv()` — читает `.env` и делает ключ доступным программе.
