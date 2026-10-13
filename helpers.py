@@ -6,11 +6,16 @@ def add_assistant_message(messages, text):
     messages.append({"role": "assistant", "content": text})
 
 
-def chat(client, model, messages):
-    message = client.messages.create(
-        model=model,
-        max_tokens=1000,
-        messages=messages,
-    )
+def chat(client, model, messages, system=None):
+    params = {
+        "model": model,
+        "max_tokens": 1000,
+        "messages": messages,
+    }
+    # API не принимает system=None, поэтому добавляем только если задан
+    if system:
+        params["system"] = system
+
+    message = client.messages.create(**params)
     # Ответ может начинаться с блока thinking, текст ищем по типу блока
     return next(block.text for block in message.content if block.type == "text")
