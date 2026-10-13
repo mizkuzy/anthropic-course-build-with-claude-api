@@ -12,4 +12,5 @@ def chat(client, model, messages):
         max_tokens=1000,
         messages=messages,
     )
-    return message.content[0].text
+    # Ответ может начинаться с блока thinking, текст ищем по типу блока
+    return next(block.text for block in message.content if block.type == "text")
