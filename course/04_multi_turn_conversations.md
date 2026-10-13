@@ -2,7 +2,7 @@
 
 Ссылка: https://academy.claude.com/courses/building-with-the-claude-api/multi-turn-conversations
 
-Notebook: `multi_turn_chat.ipynb`. Первая ячейка — та же настройка клиента, что в `first_request.ipynb`.
+Notebook: `multi_turn_chat.ipynb`. Клиент и функции урока лежат в `helpers.py`, notebook их импортирует.
 
 ## Главное
 
