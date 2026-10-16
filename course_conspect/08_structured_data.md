@@ -2,11 +2,11 @@
 
 Ссылка: https://academy.claude.com/courses/building-with-the-claude-api/structured-data
 
+**Неактуально для новых моделей.** Приём урока — prefill (начало ответа за Claude в сообщении `assistant`). На Claude Sonnet 5.5 prefill возвращает ошибку 400. Источник: https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide — в списке настроек, которые возвращают 400, есть «assistant prefill».
+
 ## Главное
 
 Когда нужны только данные (JSON, код, список), Claude часто добавляет к ним markdown-блок и пояснения. Для приложения это мешает: пользователь не может скопировать ответ целиком.
-
-**Неактуально для новых моделей.** Приём урока — prefill (начало ответа за Claude в сообщении `assistant`). На Claude Sonnet 5.5 prefill возвращает ошибку 400. Источник: https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide — в списке настроек, которые возвращают 400, есть «assistant prefill».
 
 ## Пример задачи
 
