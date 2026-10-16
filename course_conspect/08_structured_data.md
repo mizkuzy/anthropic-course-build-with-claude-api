@@ -2,6 +2,8 @@
 
 Ссылка: https://academy.claude.com/courses/building-with-the-claude-api/structured-data
 
+Notebook: [08_structured_data.ipynb](../lesson_scripts/08_structured_data.ipynb)
+
 **Неактуально для новых моделей.** Приём урока — prefill (начало ответа за Claude в сообщении `assistant`). На Claude Sonnet 5.5 prefill возвращает ошибку 400. Источник: https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide — в списке настроек, которые возвращают 400, есть «assistant prefill».
 
 ## Главное
@@ -86,4 +88,4 @@ rule = json.loads(text)
 - `additionalProperties: False` — других полей быть не может.
 - Ответ может начинаться с блока `thinking`, поэтому текст ищем по типу блока, как в `chat`.
 
-Источник: справка по Claude API в Claude Code (skill `claude-api`), раздел Structured Outputs. Код с API не проверен.
+Источник: справка по Claude API в Claude Code (skill `claude-api`), раздел Structured Outputs. Проверено на API: ответ — `{'source': ['aws.ec2'], 'detail-type': ['EC2 Instance State-change Notification']}`.
