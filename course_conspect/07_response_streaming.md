@@ -2,6 +2,8 @@
 
 Ссылка: https://academy.claude.com/courses/building-with-the-claude-api/response-streaming
 
+Notebook: [07_streaming.ipynb](../lesson_scripts/07_streaming.ipynb)
+
 ## Главное
 
 Ответ Claude может генерироваться 10–30 секунд. Без streaming пользователь всё это время ждёт и не видит результата. Со streaming текст появляется частями, по мере генерации.

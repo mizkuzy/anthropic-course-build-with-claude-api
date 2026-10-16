@@ -2,6 +2,8 @@
 
 Ссылка: https://academy.claude.com/courses/building-with-the-claude-api/making-a-request
 
+Notebook: [03_first_request.ipynb](../lesson_scripts/03_first_request.ipynb)
+
 ## 1. Библиотеки
 
 В уроке: `%pip install anthropic python-dotenv` в ячейке notebook.
