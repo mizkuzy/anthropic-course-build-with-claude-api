@@ -2,11 +2,11 @@
 
 Ссылка: https://academy.claude.com/courses/building-with-the-claude-api/temperature
 
+**Неактуально для новых моделей.** На Claude Sonnet 5.5 значение temperature не по умолчанию возвращает ошибку 400. Менять temperature можно на Claude Sonnet 4.6, более ранних моделях и Claude Haiku 4.5. Источник: https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide, раздел «Sampling parameters return an error».
+
 ## Главное
 
 Temperature — число от 0 до 1. Задаёт, насколько ответ предсказуемый или разнообразный.
-
-**Неактуально для новых моделей.** На Claude Sonnet 5.5 значение temperature не по умолчанию возвращает ошибку 400. Менять temperature можно на Claude Sonnet 4.6, более ранних моделях и Claude Haiku 4.5. Источник: https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide, раздел «Sampling parameters return an error».
 
 ## Как Claude выбирает слова
 
