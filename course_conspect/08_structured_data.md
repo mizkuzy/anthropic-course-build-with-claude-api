@@ -49,3 +49,41 @@ clean_json = json.loads(text.strip())
 ## Не только JSON
 
 Приём подходит для кода, списков, CSV и любых данных без комментариев. Нужно понять, во что Claude оборачивает ответ, и использовать это как prefill и stop sequence.
+
+## Для нашей модели: structured outputs
+
+Вместо prefill — параметр `output_config.format` с JSON Schema. API гарантирует, что текст ответа — валидный JSON по этой схеме, без markdown и пояснений.
+
+```python
+import json
+
+response = client.messages.create(
+    model=model,
+    max_tokens=1000,
+    messages=[{"role": "user", "content": "Generate a very short event bridge rule as json"}],
+    output_config={
+        "format": {
+            "type": "json_schema",
+            "schema": {
+                "type": "object",
+                "properties": {
+                    "source": {"type": "array", "items": {"type": "string"}},
+                    "detail-type": {"type": "array", "items": {"type": "string"}},
+                },
+                "required": ["source", "detail-type"],
+                "additionalProperties": False,
+            },
+        }
+    },
+)
+
+text = next(block.text for block in response.content if block.type == "text")
+rule = json.loads(text)
+```
+
+- `schema` — какие поля и каких типов должны быть в JSON.
+- `required` — обязательные поля.
+- `additionalProperties: False` — других полей быть не может.
+- Ответ может начинаться с блока `thinking`, поэтому текст ищем по типу блока, как в `chat`.
+
+Источник: справка по Claude API в Claude Code (skill `claude-api`), раздел Structured Outputs. Код с API не проверен.
