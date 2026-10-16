@@ -6,7 +6,7 @@ def add_assistant_message(messages, text):
     messages.append({"role": "assistant", "content": text})
 
 
-def chat(client, model, messages, system=None):
+def chat(client, model, messages, system=None, stream=False):
     params = {
         "model": model,
         "max_tokens": 1000,
@@ -15,6 +15,10 @@ def chat(client, model, messages, system=None):
     # API не принимает system=None, поэтому добавляем только если задан
     if system:
         params["system"] = system
+
+    # stream=True: возвращаем поток событий, а не текст
+    if stream:
+        return client.messages.create(**params, stream=True)
 
     message = client.messages.create(**params)
     # Ответ может начинаться с блока thinking, текст ищем по типу блока
