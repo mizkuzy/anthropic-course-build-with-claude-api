@@ -2,7 +2,7 @@
 
 Ссылка: https://academy.claude.com/courses/building-with-the-claude-api/system-prompts
 
-Notebook: [05_math_tutor.ipynb](../lesson_scripts/05_math_tutor.ipynb)
+Notebook: [05_math_tutor.ipynb](../../lesson_scripts/05_math_tutor.ipynb)
 
 ## Главное
 

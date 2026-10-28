@@ -2,11 +2,11 @@
 
 Ссылка: https://academy.claude.com/courses/building-with-the-claude-api/structured-data
 
-Notebook: [08_structured_data.ipynb](../lesson_scripts/08_structured_data.ipynb)
+Notebook: [08_structured_data.ipynb](../../lesson_scripts/08_structured_data.ipynb)
 
 **Неактуально для новых моделей.** Приём урока — prefill (начало ответа за Claude в сообщении `assistant`). На Claude Sonnet 5.5 prefill возвращает ошибку 400. Источник: https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide — в списке настроек, которые возвращают 400, есть «assistant prefill».
 
-Теперь формат ответа задают параметром `output_config`: в `output_config.format` передают JSON Schema, и API возвращает JSON по этой схеме. Пример — в нашем notebook [08_structured_data.ipynb](../lesson_scripts/08_structured_data.ipynb), документация — https://platform.claude.com/docs/en/build-with-claude/structured-outputs.
+Теперь формат ответа задают параметром `output_config`: в `output_config.format` передают JSON Schema, и API возвращает JSON по этой схеме. Пример — в нашем notebook [08_structured_data.ipynb](../../lesson_scripts/08_structured_data.ipynb), документация — https://platform.claude.com/docs/en/build-with-claude/structured-outputs.
 
 ## Главное
 

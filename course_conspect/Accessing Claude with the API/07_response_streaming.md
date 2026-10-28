@@ -2,7 +2,7 @@
 
 Ссылка: https://academy.claude.com/courses/building-with-the-claude-api/response-streaming
 
-Notebook: [07_streaming.ipynb](../lesson_scripts/07_streaming.ipynb)
+Notebook: [07_streaming.ipynb](../../lesson_scripts/07_streaming.ipynb)
 
 ## Главное
 
