@@ -1,16 +1,18 @@
-# Урок 3. Making a request
+# Accessing Claude with the API
+
+## Урок 3. Making a request
 
 Ссылка: https://academy.claude.com/courses/building-with-the-claude-api/making-a-request
 
 Notebook: [03_first_request.ipynb](../../lesson_scripts/03_first_request.ipynb)
 
-## 1. Библиотеки
+### 1. Библиотеки
 
 В уроке: `%pip install anthropic python-dotenv` в ячейке notebook.
 
 У нас уже установлены в `.venv` (см. `SETUP.md`), этот шаг пропускаем.
 
-## 2. Ключ в `.env`
+### 2. Ключ в `.env`
 
 Файл `.env` рядом с notebook:
 
@@ -20,7 +22,7 @@ ANTHROPIC_API_KEY="ключ"
 
 Зачем: ключ не попадает в код и в git. `.env` записан в `.gitignore`.
 
-## 3. Клиент
+### 3. Клиент
 
 Модель изменена: в уроке `claude-sonnet-4-5`, но она устарела, и API на неё отвечает ошибкой 404, поэтому используем `claude-sonnet-5-5`.
 
@@ -40,7 +42,7 @@ model = "claude-sonnet-5-5"
 
 Результат запуска: вывода нет, слева `[1]`.
 
-## 4. Запрос
+### 4. Запрос
 
 ```python
 message = client.messages.create(
@@ -55,7 +57,7 @@ message = client.messages.create(
 - `max_tokens` — верхний предел длины ответа, не цель. Модель не старается его достичь.
 - `messages` — история диалога. Роли: `user` — текст человека, `assistant` — ответы модели.
 
-## 5. Текст ответа
+### 5. Текст ответа
 
 ```python
 message.content[0].text

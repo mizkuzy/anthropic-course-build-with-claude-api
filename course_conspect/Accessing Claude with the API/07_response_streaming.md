@@ -1,21 +1,23 @@
-# Урок 7. Response streaming
+# Accessing Claude with the API
+
+## Урок 7. Response streaming
 
 Ссылка: https://academy.claude.com/courses/building-with-the-claude-api/response-streaming
 
 Notebook: [07_streaming.ipynb](../../lesson_scripts/07_streaming.ipynb)
 
-## Главное
+### Главное
 
 Ответ Claude может генерироваться 10–30 секунд. Без streaming пользователь всё это время ждёт и не видит результата. Со streaming текст появляется частями, по мере генерации.
 
-## Как работает
+### Как работает
 
 - Без streaming: сервер ждёт полный ответ, потом отправляет его клиенту.
 - Со streaming: Claude сразу подтверждает, что начал работу, и присылает серию событий. В каждом — небольшой кусок ответа. Сервер пересылает куски клиенту сразу.
 
 Всё это — один запрос к API.
 
-## События stream
+### События stream
 
 | Событие | Значение |
 |---|---|
@@ -28,7 +30,7 @@ Notebook: [07_streaming.ipynb](../../lesson_scripts/07_streaming.ipynb)
 
 Текст для пользователя — в событиях ContentBlockDelta.
 
-## Streaming через `stream=True`
+### Streaming через `stream=True`
 
 ```python
 messages = []
@@ -47,7 +49,7 @@ for event in stream:
 
 Выводит все события подряд.
 
-## Только текст: `messages.stream`
+### Только текст: `messages.stream`
 
 ```python
 with client.messages.stream(
@@ -62,7 +64,7 @@ with client.messages.stream(
 - `text_stream` — отдаёт только куски текста, остальные события пропускает.
 - `end=""` — печатать куски подряд, без переноса строки.
 
-## Полное сообщение после streaming
+### Полное сообщение после streaming
 
 ```python
 with client.messages.stream(

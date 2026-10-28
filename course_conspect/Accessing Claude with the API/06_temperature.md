@@ -1,14 +1,16 @@
-# Урок 6. Temperature
+# Accessing Claude with the API
+
+## Урок 6. Temperature
 
 Ссылка: https://academy.claude.com/courses/building-with-the-claude-api/temperature
 
 **Неактуально для новых моделей.** На Claude Sonnet 5.5 значение temperature не по умолчанию возвращает ошибку 400. Менять temperature можно на Claude Sonnet 4.6, более ранних моделях и Claude Haiku 4.5. Источник: https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide, раздел «Sampling parameters return an error».
 
-## Главное
+### Главное
 
 Temperature — число от 0 до 1. Задаёт, насколько ответ предсказуемый или разнообразный.
 
-## Как Claude выбирает слова
+### Как Claude выбирает слова
 
 1. Токенизация — ввод делится на токены.
 2. Предсказание — модель считает вероятность каждого возможного следующего токена.
@@ -16,12 +18,12 @@ Temperature — число от 0 до 1. Задаёт, насколько от�
 
 Пример: после «What do you think» — «about» 30 %, «would» 20 %, «of» 10 % и т. д.
 
-## Что делает temperature
+### Что делает temperature
 
 - Около 0 — модель почти всегда берёт самый вероятный токен. Ответы одинаковые.
 - Около 1 — вероятности распределяются ровнее. Ответы разнообразнее.
 
-## Какую выбрать
+### Какую выбрать
 
 | Temperature | Задачи |
 |---|---|
@@ -29,7 +31,7 @@ Temperature — число от 0 до 1. Задаёт, насколько от�
 | 0.4–0.7 | пересказ, учебные материалы, решение задач, творческий текст с ограничениями |
 | 0.8–1.0 | брейншторм, творческий текст, маркетинг, шутки |
 
-## `chat` с temperature
+### `chat` с temperature
 
 ```python
 def chat(messages, system=None, temperature=1.0):
@@ -48,7 +50,7 @@ def chat(messages, system=None, temperature=1.0):
 
 Изменения: аргумент `temperature=1.0` и ключ `"temperature"` в `params`.
 
-## Проверка
+### Проверка
 
 Попросить идею фильма с разной temperature:
 
@@ -61,6 +63,6 @@ answer = chat(messages, temperature=1.0)  # разнообразно
 
 Temperature не гарантирует разные ответы, а только меняет вероятность. При высокой temperature ответы тоже иногда похожи.
 
-## Отличия у нас
+### Отличия у нас
 
 В `helpers.py` вызов: `chat(client, model, messages, system=system, temperature=0.0)`.

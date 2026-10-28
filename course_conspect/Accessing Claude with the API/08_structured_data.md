@@ -1,4 +1,6 @@
-# Урок 8. Structured data
+# Accessing Claude with the API
+
+## Урок 8. Structured data
 
 Ссылка: https://academy.claude.com/courses/building-with-the-claude-api/structured-data
 
@@ -8,17 +10,17 @@ Notebook: [08_structured_data.ipynb](../../lesson_scripts/08_structured_data.ipy
 
 Теперь формат ответа задают параметром `output_config`: в `output_config.format` передают JSON Schema, и API возвращает JSON по этой схеме. Пример — в нашем notebook [08_structured_data.ipynb](../../lesson_scripts/08_structured_data.ipynb), документация — https://platform.claude.com/docs/en/build-with-claude/structured-outputs.
 
-## Главное
+### Главное
 
 Когда нужны только данные (JSON, код, список), Claude часто добавляет к ним markdown-блок и пояснения. Для приложения это мешает: пользователь не может скопировать ответ целиком.
 
-## Пример задачи
+### Пример задачи
 
 Веб-приложение генерирует правила AWS EventBridge. Пользователь вводит описание и ждёт чистый JSON.
 
 По умолчанию Claude отвечает так: JSON в блоке ```` ```json ````, а после блока — пояснение.
 
-## Решение урока: prefill + stop sequence
+### Решение урока: prefill + stop sequence
 
 ```python
 messages = []
@@ -37,7 +39,7 @@ text = chat(messages, stop_sequences=["```"])
 
 Результат — JSON без markdown и пояснений.
 
-## Обработка ответа
+### Обработка ответа
 
 В начале и в конце ответа бывают лишние переносы строк:
 
@@ -50,11 +52,11 @@ clean_json = json.loads(text.strip())
 - `strip()` — убирает пробелы и переносы по краям.
 - `json.loads()` — превращает строку JSON в объект Python.
 
-## Не только JSON
+### Не только JSON
 
 Приём подходит для кода, списков, CSV и любых данных без комментариев. Нужно понять, во что Claude оборачивает ответ, и использовать это как prefill и stop sequence.
 
-## Для нашей модели: structured outputs
+### Для нашей модели: structured outputs
 
 Вместо prefill — параметр `output_config.format` с JSON Schema. API гарантирует, что текст ответа — валидный JSON по этой схеме, без markdown и пояснений.
 

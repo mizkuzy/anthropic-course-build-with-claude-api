@@ -1,16 +1,18 @@
-# Урок 4. Multi-Turn conversations
+# Accessing Claude with the API
+
+## Урок 4. Multi-Turn conversations
 
 Ссылка: https://academy.claude.com/courses/building-with-the-claude-api/multi-turn-conversations
 
 Notebook: [04_multi_turn_chat.ipynb](../../lesson_scripts/04_multi_turn_chat.ipynb). Функции урока лежат в `helpers.py`. Клиент создаётся в notebook и передаётся в `chat` аргументом: `chat(client, model, messages)`.
 
-## Главное
+### Главное
 
 API не хранит историю диалога. Каждый запрос независим.
 
 Пример: спросить «What is quantum computing?», затем «Write another sentence». Во втором запросе Claude не знает, о чём речь, и пишет предложение на случайную тему.
 
-## Как сделать диалог
+### Как сделать диалог
 
 1. Хранить список всех сообщений в своём коде.
 2. В каждом запросе отправлять весь список.
@@ -22,7 +24,7 @@ API не хранит историю диалога. Каждый запрос �
 3. Добавить следующий вопрос как `user`.
 4. Отправить весь список.
 
-## Вспомогательные функции
+### Вспомогательные функции
 
 ```python
 def add_user_message(messages, text):
@@ -44,7 +46,7 @@ def chat(messages):
 - `add_assistant_message` — добавляет в список ответ Claude.
 - `chat` — отправляет весь список и возвращает текст ответа.
 
-## Использование
+### Использование
 
 ```python
 messages = []
