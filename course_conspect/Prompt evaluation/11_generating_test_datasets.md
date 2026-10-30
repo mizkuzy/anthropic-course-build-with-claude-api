@@ -4,9 +4,11 @@
 
 Ссылка: https://academy.claude.com/courses/building-with-the-claude-api/generating-test-datasets
 
+Notebook: [11_generating_test_datasets.ipynb](../../lesson_scripts/11_generating_test_datasets.ipynb)
+
 **Неактуально для новых моделей.** Dataset в уроке генерируют через prefill и `temperature`. На Claude Sonnet 5.5 оба дают ошибку 400 — см. уроки 6 и 8 и https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide.
 
-Чтобы получить JSON, используем `output_config` (structured outputs), как в уроке 8. Документация — https://platform.claude.com/docs/en/build-with-claude/structured-outputs.
+Чтобы получить JSON, используем `output_config` (structured outputs), как в уроке 8. Пример — в нашем notebook [11_generating_test_datasets.ipynb](../../lesson_scripts/11_generating_test_datasets.ipynb), документация — https://platform.claude.com/docs/en/build-with-claude/structured-outputs.
 
 ### Главное
 
@@ -91,7 +93,7 @@ text = next(block.text for block in response.content if block.type == "text")
 dataset = json.loads(text)["tasks"]
 ```
 
-Код ещё не проверен на API.
+Проверено на API: вернулись 3 задачи — Python-функция для S3, JSON IAM policy, regex для ID инстанса EC2.
 
 ### Сохранение dataset
 
