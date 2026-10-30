@@ -24,3 +24,12 @@ def chat(client, model, messages, system=None, stream=False):
 
     # Ответ может начинаться с блока thinking, текст ищем по типу блока
     return next(block.text for block in message.content if block.type == "text")
+
+
+def print_results(results):
+    # Печатаем поля отдельно, чтобы переносы строк в ответе были настоящими
+    for result in results:
+        print("TASK:", result["test_case"]["task"])
+        print("SCORE:", result["score"])
+        print(result["output"])
+        print("-" * 80)
