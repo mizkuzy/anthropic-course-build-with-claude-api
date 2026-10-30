@@ -4,6 +4,8 @@
 
 Ссылка: https://academy.claude.com/courses/building-with-the-claude-api/code-based-grading
 
+Notebook: [14_code_based_grading.ipynb](../../lesson_scripts/14_code_based_grading.ipynb)
+
 **Неактуально для новых моделей.** Чтобы Claude вернул только код, урок
 использует prefill ```` ```code ````. На Claude Sonnet 5.5 prefill даёт
 ошибку 400 — см. урок 8 и
