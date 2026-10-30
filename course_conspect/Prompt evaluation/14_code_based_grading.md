@@ -92,8 +92,6 @@ dataset (урок 11).
 ```python
 model_grade = grade_by_model(test_case, output)
 model_score = model_grade["score"]
-# Вызывает validate_json, validate_python или validate_regex
-# по test_case["format"]
 syntax_score = grade_syntax(output, test_case)
 
 score = (model_score + syntax_score) / 2
