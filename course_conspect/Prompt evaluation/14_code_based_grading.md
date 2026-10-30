@@ -15,6 +15,12 @@ https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide.
 prompt»). Другой вариант — structured outputs с полем для кода, как в
 уроке 11: https://platform.claude.com/docs/en/build-with-claude/structured-outputs.
 
+В нашем notebook код приходит через structured outputs в поле `code`.
+Проверено на API (Haiku 5.5): только с инструкциями в prompt Claude
+оборачивал код в блок ```` ``` ```` и синтаксис Python и JSON получал 0,
+средний балл 5.83. Со structured outputs синтаксис везде 10, средний
+балл 9.17.
+
 ### Главное
 
 Grader на коде проверяет, что сгенерированный код синтаксически верный и в
