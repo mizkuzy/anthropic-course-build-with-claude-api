@@ -4,11 +4,11 @@
     "format": "python"
   },
   {
-    "task": "Write a JSON IAM policy document that allows read-only access (s3:GetObject and s3:ListBucket) to the bucket named 'reports-bucket' only.",
+    "task": "Write a JSON IAM policy document that allows read-only access (s3:GetObject and s3:ListBucket) to the bucket named 'reports-archive' only.",
     "format": "json"
   },
   {
-    "task": "Write a regex that matches valid AWS EC2 instance IDs (e.g., i-0abcd1234efgh5678), which start with 'i-' followed by 8 or 17 lowercase hexadecimal characters.",
+    "task": "Write a regex that matches valid AWS EC2 instance IDs (for example i-0abc123def4567890), which start with 'i-' followed by 8 or 17 lowercase hexadecimal characters.",
     "format": "regex"
   }
 ]
