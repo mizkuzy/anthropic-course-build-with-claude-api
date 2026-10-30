@@ -1,11 +1,14 @@
 [
   {
-    "task": "Write a Python function using boto3 that takes an S3 bucket name and returns a list of all object keys in the bucket that end with '.csv', handling pagination correctly."
+    "task": "Write a Python function that takes an S3 bucket name and returns the total number of objects in the bucket using boto3, handling pagination.",
+    "format": "python"
   },
   {
-    "task": "Write a JSON IAM policy document that grants read-only access (s3:GetObject and s3:ListBucket) to a bucket named 'analytics-data-prod' and all objects within it."
+    "task": "Write a JSON IAM policy document that allows read-only access (s3:GetObject and s3:ListBucket) to the bucket named 'reports-bucket' only.",
+    "format": "json"
   },
   {
-    "task": "Write a regular expression that matches a valid AWS EC2 instance ID, which is 'i-' followed by either 8 or 17 lowercase hexadecimal characters, and that matches the entire string only."
+    "task": "Write a regex that matches valid AWS EC2 instance IDs (e.g., i-0abcd1234efgh5678), which start with 'i-' followed by 8 or 17 lowercase hexadecimal characters.",
+    "format": "regex"
   }
 ]
