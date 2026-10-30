@@ -4,6 +4,8 @@
 
 Ссылка: https://academy.claude.com/courses/building-with-the-claude-api/running-the-eval
 
+Notebook: [12_running_the_eval.ipynb](../../lesson_scripts/12_running_the_eval.ipynb)
+
 ### Главное
 
 Собираем основу eval pipeline: каждую задачу из dataset подставляем в
