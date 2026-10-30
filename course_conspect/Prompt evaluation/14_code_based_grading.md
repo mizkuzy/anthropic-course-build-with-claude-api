@@ -76,10 +76,6 @@ def validate_regex(text):
 Для этого добавляем поле `format` в пример ответа в prompt генерации
 dataset (урок 11).
 
-Функция `grade_syntax(output, test_case)` по `test_case["format"]`
-вызывает `validate_json`, `validate_python` или `validate_regex`. В уроке
-её кода нет.
-
 ### Более точный prompt
 
 Добавляем в prompt инструкции о формате:
@@ -96,6 +92,8 @@ dataset (урок 11).
 ```python
 model_grade = grade_by_model(test_case, output)
 model_score = model_grade["score"]
+# Вызывает validate_json, validate_python или validate_regex
+# по test_case["format"]
 syntax_score = grade_syntax(output, test_case)
 
 score = (model_score + syntax_score) / 2
