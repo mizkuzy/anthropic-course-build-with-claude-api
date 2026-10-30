@@ -4,6 +4,8 @@
 
 Ссылка: https://academy.claude.com/courses/building-with-the-claude-api/model-based-grading
 
+Notebook: [13_model_based_grading.ipynb](../../lesson_scripts/13_model_based_grading.ipynb)
+
 **Неактуально для новых моделей.** Grader в уроке получает JSON через
 prefill. На Claude Sonnet 5.5 prefill даёт ошибку 400 — см. урок 8 и
 https://platform.claude.com/docs/en/models/sonnet-5-5/migration-guide.
@@ -89,6 +91,8 @@ schema = {
 Схему передаём в `output_config={"format": {"type": "json_schema",
 "schema": schema}}`, как в уроке 11. Диапазон 1–10 указываем в тексте
 prompt.
+
+Проверено на API (Haiku 5.5): оценки 8, 9 и 8, средняя 8.33.
 
 ### Grader в pipeline
 
