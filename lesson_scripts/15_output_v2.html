@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Prompt Evaluation Report</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 20px; color: #333; }
+  table { width: 100%; border-collapse: collapse; }
+  th { background: #4a4a4a; color: white; text-align: left;
+        padding: 10px; }
+  td { padding: 10px; border-bottom: 1px solid #ddd;
+        vertical-align: top; }
+  pre { white-space: pre-wrap; margin: 0; }
+  .score { font-weight: bold; }
+</style>
+</head>
+<body>
+<h1>Prompt Evaluation Report</h1>
+<p>Total test cases: 3 · Average score: 2.7 / 10
+ · Pass rate (≥7): 0.0%</p>
+<table>
+  <tr><th>Scenario</th><th>Prompt Inputs</th><th>Solution Criteria</th>
+      <th>Output</th><th>Score</th><th>Reasoning</th></tr>
+  
+        <tr>
+          <td>Strength-focused powerlifter (height 180 cm, weight 95 kg, goal: lean muscle gain) with a gluten-free restriction, testing whether the plan supplies high protein and calories while avoiding hidden gluten sources.</td>
+          <td><b>height:</b> 180 cm<br><b>weight:</b> 95 kg<br><b>goal:</b> Lean muscle gain<br><b>restrictions:</b> Gluten-free; avoid hidden gluten sources such as soy sauce, malt, barley, and wheat-based additives</td>
+          <td>• Provides a compact one-day meal plan for a single athlete<br>• Meal plan delivers high protein and calories suitable for lean muscle gain for a 180 cm, 95 kg powerlifter<br>• Contains no gluten or hidden gluten sources (e.g., wheat, barley, malt, regular soy sauce)</td>
+          <td><pre>**Estimated daily targets** (assumes adult, moderately active; adjust by weight change over 2-4 weeks)
+
+| Item | Target |
+|---|---|
+| Calories | 3,000-3,300 kcal |
+| Protein | 170-200 g (about 1.8-2.1 g/kg) |
+| Carbs | 350-400 g |
+| Fat | 80-100 g |
+| Water | about 3-4 L |
+
+**Good foods**
+
+| Group | Examples |
+|---|---|
+| Protein | Chicken, turkey, beef, pork, fish, eggs, Greek yogurt, cottage cheese, tofu (check label) |
+| Carbs | Rice, potatoes, sweet potatoes, quinoa, corn, buckwheat, certified gluten-free oats |
+| Fats | Olive oil, avocado, nuts, seeds, nut butter |
+| Vegetables | All fresh or frozen plain vegetables |
+| Fruit | All fresh or frozen plain fruit |
+| Dairy | Milk, cheese, yogurt (plain) |
+
+**Avoid**
+
+- Wheat, barley, rye, malt
+- Soy sauce (use tamari labeled gluten-free)
+- Beer and malt drinks
+- Seasoned or processed meats (check for wheat fillers)
+- Breaded or battered foods
+- Pre-made sauces, gravies, soups, and dressings unless labeled gluten-free
+- Imitation crab, some spice blends, and some protein powders
+
+**Meal pattern (4-5 meals/day)**
+
+- Breakfast: eggs, rice cakes or GF oats, fruit
+- Lunch: chicken or fish, rice or potatoes, vegetables, olive oil
+- Snack: Greek yogurt, nuts, fruit
+- Dinner: lean beef or fish, sweet potato, vegetables
+- Pre- or post-workout: GF protein shake, banana, rice
+
+**Notes**
+
+- Weigh yourself weekly. If weight does not rise by about 0.25-0.5 kg per week, add 200-300 kcal per day.
+- Check labels for &quot;gluten-free&quot; on any processed food.
+- Strength training 3-5 days per week is needed for muscle gain.</pre></td>
+          <td class="score">2</td>
+          <td>The solution fails a mandatory requirement. The extra_important_criteria require daily caloric total, macronutrient breakdown, and meals with exact foods, portions, and timing. It provides target ranges and a macro table, which partly covers the first two, but its meals have no portions and no timing, and it gives no per-meal or total calorie count tied to a plan. Gluten-free handling is solid and the protein and calorie targets are appropriate for a 95 kg lean-gain athlete, but the mandatory failure caps the score at 3 or lower.</td>
+        </tr>
+        <tr>
+          <td>Petite gymnast (height 150 cm, weight 45 kg, goal: maintain weight during competition season) with a tree-nut allergy, testing whether the plan scales portions to a light body mass and avoids nut-based ingredients entirely.</td>
+          <td><b>height:</b> 150 cm<br><b>weight:</b> 45 kg<br><b>goal:</b> Maintain current body weight during competition season while fueling training for a competitive gymnast<br><b>restrictions:</b> Tree-nut allergy; no tree nuts or nut-based ingredients (including almond, cashew, walnut, pecan, pistachio, hazelnut, almond milk, nut butters, and nut-based oils or flours)</td>
+          <td>• Plan contains no tree nuts or nut-derived ingredients (e.g., almond milk, nut butter, nut flour, pesto with pine nuts)<br>• Portion sizes and total calories are scaled appropriately for a 45 kg, 150 cm athlete aiming to maintain weight<br>• Plan is compact and covers a single day with breakfast, lunch, dinner, and snacks</td>
+          <td><pre>**Daily targets (estimate)**
+
+| Nutrient | Target |
+|---|---|
+| Energy | About 1,900–2,100 kcal |
+| Protein | 55–70 g (about 1.2–1.5 g/kg) |
+| Carbohydrate | 200–260 g (about 4.5–6 g/kg) |
+| Fat | 60–75 g (about 25–30% of energy) |
+| Fluid | About 2–2.5 L, more on training days |
+
+Adjust by 100–200 kcal every 1–2 weeks based on weight trend. Check with a sports dietitian, since age and training load change the numbers.
+
+**Sample day**
+
+| Meal | Food |
+|---|---|
+| Breakfast | Oatmeal with milk or soy milk, banana, sunflower seed butter, berries |
+| Snack | Greek yogurt, honey, fruit |
+| Lunch | Chicken or turkey, brown rice, roasted vegetables, olive oil |
+| Pre-training snack | Rice cakes with jam, or a bagel with banana |
+| Dinner | Salmon or lean beef, potatoes or pasta, green vegetables |
+| Post-training | Chocolate milk or soy milk, or a yogurt-fruit smoothie |
+| Evening (optional) | Whole-grain toast with cheese or eggs |
+
+**Nut-free swaps**
+
+| Instead of | Use |
+|---|---|
+| Nut butter | Sunflower seed butter, soy nut butter (check label), tahini |
+| Almond or cashew milk | Cow&#x27;s milk, soy milk, oat milk |
+| Nut flour | Oat flour, rice flour, wheat flour |
+| Nut-based oils | Olive, canola, or sunflower oil |
+| Nut toppings or granola with nuts | Seeds (pumpkin, sunflower), oats, dried fruit |
+
+**Important notes**
+
+- Coconut is classed as a tree nut by the FDA. Confirm with the allergist whether it is safe for this person.
+- Peanuts are legumes, not tree nuts. Ask the allergist whether peanuts are also to be avoided.
+- Read labels for &quot;may contain tree nuts&quot; and &quot;processed in a facility with nuts.&quot; Avoid these if the allergy is severe.
+- Carry an epinephrine auto-injector if prescribed, especially at competitions and travel.</pre></td>
+          <td class="score">3</td>
+          <td>The solution avoids tree nuts and has sensible targets, but it fails two mandatory requirements in the extra criteria: the meals lack exact portions and timing, and the sample day has no daily calorie or macronutrient total. Any mandatory violation caps the score at 3 or lower, so it receives a 3.</td>
+        </tr>
+        <tr>
+          <td>Vegan endurance runner (height 175 cm, weight 68 kg, goal: marathon training fuel) testing whether the meal plan excludes all animal products while meeting high carbohydrate and protein needs.</td>
+          <td><b>height:</b> 175 cm<br><b>weight:</b> 68 kg<br><b>goal:</b> Marathon training fuel: high carbohydrate intake to support long training runs with adequate protein for muscle recovery<br><b>restrictions:</b> Strictly vegan: no meat, fish, eggs, dairy, honey, or other animal-derived ingredients</td>
+          <td>• Contains no animal products (meat, fish, eggs, dairy, honey, or derivatives)<br>• Provides high carbohydrate content appropriate for endurance training<br>• Includes a meaningful protein source at each main meal<br>• Is presented as a compact one-day meal plan</td>
+          <td><pre>Daily targets (estimate for 175 cm, 68 kg, marathon training):
+
+| Nutrient | Target |
+|---|---|
+| Calories | about 2,800–3,200 kcal |
+| Carbohydrate | 6–8 g per kg: about 410–545 g |
+| Protein | 1.6–2.0 g per kg: about 110–135 g |
+| Fat | about 60–90 g |
+
+Vegan food sources:
+
+| Group | Foods |
+|---|---|
+| Carbohydrates | oats, rice, pasta, bread, potatoes, quinoa, bananas, dried fruit, fruit juice, cereal |
+| Protein | tofu, tempeh, seitan, lentils, chickpeas, black beans, soy milk, edamame, peanut butter, pea protein powder |
+| Fats | olive oil, avocado, nuts, seeds, nut butters |
+| Vegetables | leafy greens, broccoli, peppers, carrots, tomatoes |
+| Fruit | bananas, berries, oranges, dates, mango |
+
+Vitamins and minerals to watch:
+
+| Nutrient | Vegan source or supplement |
+|---|---|
+| Vitamin B12 | Fortified foods or supplement (required) |
+| Iron | Lentils, tofu, fortified cereal, pumpkin seeds; pair with vitamin C |
+| Calcium | Fortified soy milk, tofu set with calcium, kale, bok choy |
+| Vitamin D | Fortified foods or supplement |
+| Omega-3 | Flaxseed, chia seeds, walnuts, or algae oil supplement |
+| Iodine | Iodized salt or seaweed in small amounts |
+
+Sample day:
+
+| Meal | Food |
+|---|---|
+| Breakfast | 80 g oats cooked in soy milk, banana, 1 tbsp peanut butter, berries |
+| Snack | Rice cakes with jam, orange |
+| Lunch | 150 g cooked pasta, 150 g tofu, vegetables, olive oil |
+| Pre-run snack | Bagel with jam, or dates |
+| Dinner | 200 g cooked rice, 150 g lentil or chickpea curry, spinach, potato |
+| Evening | Soy yogurt, fruit, handful of nuts |
+
+Timing:
+
+| When | What |
+|---|---|
+| 2–4 h before long run | Carb-heavy meal, low fiber, low fat |
+| During runs over 90 min | 30–60 g carbs per hour (gels, dried fruit, sports drink) |
+| Within 60 min after | Carbs plus 20–30 g protein |
+
+Fluids: drink to match thirst and urine color. Add sodium around long runs.</pre></td>
+          <td class="score">3</td>
+          <td>The vegan constraint is respected and the plan is compact. However, the mandatory requirements call for a daily caloric total, a macronutrient breakdown, and meals with exact foods, portions, and timing. The solution gives only target ranges rather than totals for its own sample day, and several items lack exact portions. Timing is in a separate table rather than tied to meals. Because a mandatory element is only partially met, and the sample day appears to fall short of its protein and carbohydrate targets, the solution fails the mandatory standard.</td>
+        </tr>
+</table>
+</body>
+</html>

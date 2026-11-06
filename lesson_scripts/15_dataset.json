@@ -1,49 +1,48 @@
 [
   {
     "prompt_inputs": {
-      "height": "165 cm",
-      "weight": "95 kg",
-      "goal": "Lean muscle gain",
-      "restrictions": "Gluten-free"
+      "height": "175 cm",
+      "weight": "68 kg",
+      "goal": "Marathon training fuel: high carbohydrate intake to support long training runs with adequate protein for muscle recovery",
+      "restrictions": "Strictly vegan: no meat, fish, eggs, dairy, honey, or other animal-derived ingredients"
     },
     "solution_criteria": [
-      "Provides a single day's meal plan that is compact and concise",
-      "Prioritizes high protein intake across meals appropriate for lean muscle gain",
-      "Uses only gluten-free grains or starches and avoids gluten-containing ingredients"
+      "Contains no animal products (meat, fish, eggs, dairy, honey, or derivatives)",
+      "Provides high carbohydrate content appropriate for endurance training",
+      "Includes a meaningful protein source at each main meal",
+      "Is presented as a compact one-day meal plan"
     ],
     "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-    "scenario": "Strength-focused powerlifter (height 165 cm, weight 95 kg, goal: lean muscle gain) with a gluten-free restriction tests whether the plan prioritizes high protein and gluten-free grains while staying compact."
-  },
-  {
-    "prompt_inputs": {
-      "height": "180 cm",
-      "weight": "70 kg",
-      "goal": "Marathon training with high carbohydrate needs; the plan should meet daily calorie and protein targets for an endurance athlete",
-      "restrictions": "Strictly vegan: no meat, fish, dairy, eggs, honey, or other animal-derived foods; plant-based foods only"
-    },
-    "solution_criteria": [
-      "Provides a single-day meal plan that is compact and concise, listing meals with foods and approximate portions",
-      "Uses only plant-based foods with no animal-derived ingredients (meat, fish, dairy, eggs, honey)",
-      "States an estimated total daily calorie count and protein total, and both are appropriate for a 70 kg marathon-training athlete with high carbohydrate needs",
-      "Emphasizes carbohydrate-rich foods so the plan reflects high carbohydrate needs"
-    ],
-    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-    "scenario": "Vegan endurance runner (height 180 cm, weight 70 kg, goal: marathon training with high carbohydrate needs) tests whether the meal plan meets calorie and protein targets using only plant-based foods."
+    "scenario": "Vegan endurance runner (height 175 cm, weight 68 kg, goal: marathon training fuel) testing whether the meal plan excludes all animal products while meeting high carbohydrate and protein needs."
   },
   {
     "prompt_inputs": {
       "height": "150 cm",
       "weight": "45 kg",
-      "goal": "Maintain current weight while improving flexibility",
-      "restrictions": "Dairy-free and nut-free"
+      "goal": "Maintain current body weight during competition season while fueling training for a competitive gymnast",
+      "restrictions": "Tree-nut allergy; no tree nuts or nut-based ingredients (including almond, cashew, walnut, pecan, pistachio, hazelnut, almond milk, nut butters, and nut-based oils or flours)"
     },
     "solution_criteria": [
-      "Plan is a single day of meals for one athlete in a compact format",
-      "Contains no dairy ingredients (milk, cheese, yogurt, butter, whey) and no nuts or nut-derived ingredients",
-      "Total calories are appropriate for a 45 kg, 150 cm athlete maintaining weight, roughly 1,800 to 2,200 kcal",
-      "Includes foods supporting flexibility and recovery, such as protein sources and fruits or vegetables"
+      "Plan contains no tree nuts or nut-derived ingredients (e.g., almond milk, nut butter, nut flour, pesto with pine nuts)",
+      "Portion sizes and total calories are scaled appropriately for a 45 kg, 150 cm athlete aiming to maintain weight",
+      "Plan is compact and covers a single day with breakfast, lunch, dinner, and snacks"
     ],
     "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-    "scenario": "Petite gymnast (height 150 cm, weight 45 kg, goal: maintain weight while improving flexibility) with a dairy-free and nut-free restriction tests whether the plan avoids common allergens and provides adequate calories for a small athlete."
+    "scenario": "Petite gymnast (height 150 cm, weight 45 kg, goal: maintain weight during competition season) with a tree-nut allergy, testing whether the plan scales portions to a light body mass and avoids nut-based ingredients entirely."
+  },
+  {
+    "prompt_inputs": {
+      "height": "180 cm",
+      "weight": "95 kg",
+      "goal": "Lean muscle gain",
+      "restrictions": "Gluten-free; avoid hidden gluten sources such as soy sauce, malt, barley, and wheat-based additives"
+    },
+    "solution_criteria": [
+      "Provides a compact one-day meal plan for a single athlete",
+      "Meal plan delivers high protein and calories suitable for lean muscle gain for a 180 cm, 95 kg powerlifter",
+      "Contains no gluten or hidden gluten sources (e.g., wheat, barley, malt, regular soy sauce)"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Strength-focused powerlifter (height 180 cm, weight 95 kg, goal: lean muscle gain) with a gluten-free restriction, testing whether the plan supplies high protein and calories while avoiding hidden gluten sources."
   }
 ]
