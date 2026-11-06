@@ -4,6 +4,8 @@
 
 Ссылка: https://academy.claude.com/courses/building-with-the-claude-api/prompt-engineering
 
+Notebook: [15_prompt_engineering.ipynb](../../lesson_scripts/15_prompt_engineering.ipynb)
+
 ### Главное
 
 Prompt engineering — улучшение уже написанного prompt, чтобы ответы были
@@ -118,3 +120,39 @@ The output should include:
 
 В следующих уроках применяем техники prompt engineering. Правило: одно
 изменение за раз, потом оценка. Так видно, какая техника что даёт.
+
+### Что мы поменяли
+
+**`PromptEvaluator`.** Кода класса в уроке нет. Курс ссылается на файл
+`001_prompting.ipynb`, но в Academy его нет. Мы взяли код из репозитория
+студента
+([jaygaha/Building-with-the-Claude-API](https://github.com/jaygaha/Building-with-the-Claude-API))
+и переписали в [prompt_evaluator.py](../../prompt_evaluator.py):
+- structured outputs вместо prefill и `temperature` (на новых моделях они
+  дают ошибку 400);
+- исправили ошибку: описание входных данных не попадало в prompt генерации
+  сценариев;
+- ответы Claude в HTML-отчёте экранируются, иначе символ `<` ломает
+  таблицу.
+
+**Thinking выключен.** Haiku 5.5 по умолчанию сначала думает (блок
+`thinking`), и на план питания не хватало `max_tokens`: ответ обрезался
+или текста не было совсем. Решение:
+- `max_tokens` в `chat` поднят до 4000;
+- в `chat` добавлен параметр `thinking`, в notebook передаём
+  `{"type": "disabled"}`.
+
+**Три варианта prompt** на одном dataset из 3 задач:
+
+| Вариант | Средний балл | Средняя длина ответа |
+|---|---|---|
+| простой prompt | 3.0 | ~3200 символов |
+| + system prompt для коротких ответов | 2.7 | ~1600 символов |
+| + требования к ответу прямо в prompt | 6.3 | ~1800 символов |
+
+Вывод:
+- system prompt про стиль сокращает ответ, но балл не поднимает: из
+  ответа пропадают калории, БЖУ и порции;
+- балл вырос, когда требования (`extra_criteria`) добавили в сам prompt.
+  Раньше их видел только grader, а Claude, который писал ответ, не знал,
+  что от него ждут.
