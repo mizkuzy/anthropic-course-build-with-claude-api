@@ -6,7 +6,7 @@ def add_assistant_message(messages, text):
     messages.append({"role": "assistant", "content": text})
 
 
-def chat(client, model, messages, system=None, stream=False):
+def chat(client, model, messages, system=None, stream=False, thinking=None):
     params = {
         "model": model,
         "max_tokens": 4000,
@@ -16,6 +16,9 @@ def chat(client, model, messages, system=None, stream=False):
     # API не принимает system=None, поэтому добавляем только если задан
     if system:
         params["system"] = system
+    # Например {"type": "disabled"} — выключить thinking (Haiku 5.5)
+    if thinking:
+        params["thinking"] = thinking
 
     message = client.messages.create(**params)
     # stream=True: возвращаем поток событий, а не текст
