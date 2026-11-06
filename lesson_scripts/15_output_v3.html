@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Prompt Evaluation Report</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 20px; color: #333; }
+  table { width: 100%; border-collapse: collapse; }
+  th { background: #4a4a4a; color: white; text-align: left;
+        padding: 10px; }
+  td { padding: 10px; border-bottom: 1px solid #ddd;
+        vertical-align: top; }
+  pre { white-space: pre-wrap; margin: 0; }
+  .score { font-weight: bold; }
+</style>
+</head>
+<body>
+<h1>Prompt Evaluation Report</h1>
+<p>Total test cases: 3 · Average score: 6.3 / 10
+ · Pass rate (≥7): 33.3%</p>
+<table>
+  <tr><th>Scenario</th><th>Prompt Inputs</th><th>Solution Criteria</th>
+      <th>Output</th><th>Score</th><th>Reasoning</th></tr>
+  
+        <tr>
+          <td>Lightweight gymnast (height 150 cm, weight 45 kg, goal: maintain weight while improving energy) with a tree-nut and shellfish allergy tests whether the plan stays compact, allergen-safe, and appropriate for a small body size.</td>
+          <td><b>height:</b> 150 cm<br><b>weight:</b> 45 kg<br><b>goal:</b> Maintain current body weight while improving daily energy levels for training<br><b>restrictions:</b> Tree-nut allergy and shellfish allergy; avoid all tree nuts (including almonds, walnuts, cashews, pistachios, hazelnuts) and all shellfish (including shrimp, crab, lobster, and clams)</td>
+          <td>• Plan is a single day of meals (e.g., breakfast, lunch, dinner, and snacks) written compactly and concisely<br>• Contains no tree nuts or shellfish or ingredients derived from them<br>• Calorie and portion sizes are appropriate for a 150 cm, 45 kg athlete aiming to maintain weight while improving energy</td>
+          <td><pre>**Profile:** 150 cm, 45 kg. Goal: maintain weight, more daily energy for training.
+**Avoid:** all tree nuts and all shellfish.
+
+**Daily calories (estimate):** about 2,000 kcal
+- Maintenance is roughly 1,800 to 2,100 kcal for this build and activity level. Adjust by 100 to 200 kcal if weight changes over 2 weeks.
+
+**Macronutrients (daily):**
+
+| Macro | Grams | kcal | % of total |
+|---|---|---|---|
+| Protein | 90 g | 360 | 18% |
+| Carbohydrate | 260 g | 1,040 | 52% |
+| Fat | 65 g | 585 | 29% |
+
+Protein is 2.0 g/kg, which supports training recovery.
+
+**Meals:**
+
+**Breakfast (07:00), about 500 kcal**
+- 80 g rolled oats, cooked in 250 ml milk
+- 1 medium banana
+- 150 g plain Greek yogurt
+- 1 tbsp honey
+
+**Mid-morning snack (10:00), about 250 kcal**
+- 1 slice whole-grain bread, 40 g
+- 2 tbsp peanut butter (check label: peanut is a legume, not a tree nut, but confirm no tree-nut cross-contact)
+- 1 apple
+
+**Lunch (13:00), about 550 kcal**
+- 150 g cooked chicken breast
+- 150 g cooked white rice
+- 150 g steamed broccoli
+- 1 tbsp olive oil on the vegetables
+
+**Pre-training snack (16:00), about 250 kcal**
+- 1 rice cake or 1 slice bread, 30 g
+- 1 tbsp jam
+- 200 ml orange juice
+
+**Post-training dinner (19:30), about 500 kcal**
+- 150 g cooked salmon or lean beef (salmon is fish, not shellfish)
+- 200 g cooked potatoes
+- 150 g mixed salad with 1 tbsp olive oil dressing
+- 100 g cooked carrots
+
+**Evening (21:00), about 150 kcal, optional**
+- 200 g low-fat cottage cheese or 250 ml milk
+
+**Hydration:** 2 to 2.5 L water per day, more on training days.
+
+**Timing:** Eat a carbohydrate-rich snack 1 to 2 hours before training and protein plus carbohydrate within 1 hour after.
+
+**Notes:**
+- Check all packaged foods for &quot;may contain tree nuts&quot; or &quot;may contain shellfish&quot; warnings.
+- Consider a dietitian and a doctor if the allergy is severe or if energy stays low after 2 to 4 weeks.</pre></td>
+          <td class="score">7</td>
+          <td>The plan is a compact single day that meets the allergy restrictions and the calorie and macro requirements in structure. It includes a daily total, a macronutrient breakdown, and meals with foods, portions and timing, so the mandatory elements are present. However, the meal-level calories do not reconcile with the stated 2,000 kcal total, breakfast is noticeably underestimated, and some items are given as either/or choices rather than exact foods. These are real accuracy and precision issues but do not violate a mandatory requirement, so the score is in the 7-8 range.</td>
+        </tr>
+        <tr>
+          <td>Vegan endurance runner (height 178 cm, weight 70 kg, goal: marathon training with high carbohydrate needs) tests whether the meal plan meets calorie and protein targets using only plant-based foods.</td>
+          <td><b>height:</b> 178 cm<br><b>weight:</b> 70 kg<br><b>goal:</b> Marathon training with high carbohydrate needs; the plan should meet daily calorie and protein targets appropriate for a 70 kg endurance runner<br><b>restrictions:</b> Strictly vegan: no meat, fish, eggs, dairy, honey, or other animal-derived ingredients; plant-based foods only</td>
+          <td>• Uses only plant-based foods with no animal-derived ingredients<br>• Total daily calories and protein are stated and fall within a reasonable range for a 70 kg marathon trainee (roughly 2800-3500 kcal and 100-130 g protein)<br>• Carbohydrate content is clearly high relative to protein and fat, consistent with marathon training needs<br>• Plan is compact, organized as one day of meals with approximate portions</td>
+          <td><pre>**Daily targets (70 kg, marathon training)**
+
+- Calories: about 3,000 kcal (training-day estimate; adjust by ±300 kcal based on weight trend)
+- Protein: 1.6 g/kg = about 112 g
+- Carbohydrates: 6–7 g/kg = about 450 g (roughly 60% of calories)
+- Fat: about 80 g (roughly 25% of calories)
+
+**Macronutrient check**
+
+| Macro | Grams | kcal | % of total |
+|---|---|---|---|
+| Protein | 112 | 448 | 15% |
+| Carbs | 450 | 1,800 | 60% |
+| Fat | 80 | 720 | 24% |
+| Total | | 2,968 | ~100% |
+
+**Meal plan (all vegan)**
+
+**Breakfast (07:00): Oatmeal bowl**
+- Rolled oats, dry: 90 g
+- Soy milk, fortified: 300 ml
+- Banana: 1 medium (120 g)
+- Maple syrup: 15 g
+- Walnuts: 20 g
+- Approx.: 620 kcal, 27 g protein, 100 g carbs, 17 g fat
+
+**Mid-morning (10:00): Snack**
+- Whole-grain bread, 2 slices (70 g)
+- Peanut butter: 30 g
+- Approx.: 360 kcal, 11 g protein, 42 g carbs, 15 g fat
+
+**Lunch (13:00): Lentil and rice bowl**
+- Cooked brown rice: 250 g
+- Cooked lentils: 200 g
+- Roasted vegetables (bell pepper, zucchini, carrot): 200 g
+- Olive oil: 10 ml
+- Approx.: 650 kcal, 30 g protein, 110 g carbs, 12 g fat
+
+**Pre-run (16:00): Snack**
+- Dates: 4 (about 70 g)
+- Rice cakes: 2
+- Approx.: 260 kcal, 4 g protein, 60 g carbs, 0.5 g fat
+
+**Post-run (18:00): Recovery shake**
+- Soy milk, fortified: 400 ml
+- Pea or soy protein powder: 30 g
+- Banana: 1 medium (120 g)
+- Approx.: 430 kcal, 36 g protein, 60 g carbs, 8 g fat
+
+**Dinner (20:00): Tofu and potato plate**
+- Firm tofu: 200 g
+- Baked potato: 300 g
+- Steamed broccoli: 150 g
+- Tahini: 15 g
+- Approx.: 620 kcal, 35 g protein, 60 g carbs, 25 g fat
+
+**Evening (21:30): Snack**
+- Chickpeas, cooked: 100 g
+- Hummus: 50 g
+- Whole-grain crackers: 30 g
+- Approx.: 320 kcal, 11 g protein, 40 g carbs, 12 g fat
+
+**Daily totals (approx.)**
+- Calories: 3,260 kcal
+- Protein: 154 g
+- Carbs: 472 g
+- Fat: 90 g
+
+**Vitamin B12 note:** B12 is not reliably found in plant foods. Use a fortified food (soy milk, nutritional yeast) or a supplement. Consider checking iron and vitamin D status with a doctor, since endurance training raises needs for both.</pre></td>
+          <td class="score">6</td>
+          <td>The plan is vegan, well organized, and includes the mandatory calorie total, macro breakdown, and timed meals with exact portions, and its per-meal and daily sums are arithmetically correct. However, total protein of about 154 g falls outside the 100-130 g range required by the criteria and contradicts the solution&#x27;s own 112 g target. The calorie and fat figures are also inconsistent across sections. These errors are significant enough to lower the score well below the top range, though the core structure and vegan compliance are sound.</td>
+        </tr>
+        <tr>
+          <td>Strength-focused powerlifter (height 165 cm, weight 92 kg, goal: lean muscle gain) with a gluten-free and dairy-free restriction tests whether the plan prioritizes high protein while avoiding both restricted ingredients.</td>
+          <td><b>height:</b> 165 cm<br><b>weight:</b> 92 kg<br><b>goal:</b> Lean muscle gain<br><b>restrictions:</b> Gluten-free and dairy-free</td>
+          <td>• Provides a single-day meal plan with meals and approximate portions for one athlete<br>• Prioritizes high protein content across the day&#x27;s meals<br>• Contains no gluten-containing or dairy ingredients</td>
+          <td><pre>**Assumptions** (no age, sex, or activity level given):
+- Male, 30 years, moderately active (3–5 sessions/week)
+
+**Estimated maintenance:** ~2,600 kcal/day (Mifflin-St Jeor, activity factor 1.55; BMI ≈ 33.8)
+
+**Daily target:** ~2,900 kcal (maintenance + ~300 kcal surplus)
+
+**Macronutrients (daily)**
+
+| Macro | Grams | kcal | % of total |
+|---|---|---|---|
+| Protein | 175 g (1.9 g/kg) | 700 | 24% |
+| Carbs | 380 g | 1,520 | 52% |
+| Fat | 80 g | 720 | 25% |
+
+**Meals**
+
+| Time | Meal | Foods and portions | kcal | P / C / F (g) |
+|---|---|---|---|---|
+| 07:00 | Breakfast | 100 g oats (cooked in 250 ml water), 150 g banana, 30 g almonds | 620 | 20 / 100 / 20 |
+| 10:00 | Snack | 200 g chicken breast, 150 g cooked rice | 430 | 45 / 35 / 5 |
+| 13:00 | Lunch | 200 g salmon, 200 g cooked potatoes, 150 g broccoli, 1 tbsp olive oil | 720 | 45 / 45 / 35 |
+| 16:30 | Pre-workout | 1 rice cake, 30 g honey, 200 g strawberries | 350 | 5 / 85 / 2 |
+| 19:30 | Dinner | 200 g lean beef (5% fat), 200 g sweet potato, 150 g green beans, 1 tbsp olive oil | 680 | 50 / 50 / 25 |
+| 22:00 | Before bed | 150 g gluten-free tofu (firm), 30 g pumpkin seeds | 300 | 35 / 5 / 15 |
+
+**Totals:** ~3,100 kcal, 200 g protein, 325 g carbs, 102 g fat. Trim 1 tbsp olive oil from dinner and 30 g almonds from breakfast to reach ~2,900 kcal.
+
+**Notes**
+- Check that oats are labeled gluten-free (cross-contamination risk).
+- Use a gluten-free, dairy-free protein powder if extra protein is needed.
+- Adjust by 100–150 kcal every 2 weeks based on weight change (target gain ~0.25–0.5 kg/month).</pre></td>
+          <td class="score">6</td>
+          <td>The plan meets all mandatory requirements: it is a single-day plan with exact foods, portions and timings, and it states a daily calorie total and macronutrient breakdown. It avoids dairy and uses mostly gluten-free ingredients, with a caveat for oats. Protein is prioritized (about 200 g). However, the rigor check reveals several numerical inconsistencies between the target and the meal totals, miscalculated per-meal kcal and macro values, and an ambiguous post-trim calorie figure. These undermine the reliability of the stated targets, so the solution falls short of the secondary criteria&#x27;s precision expectations, though it remains usable.</td>
+        </tr>
+</table>
+</body>
+</html>

@@ -1,48 +1,48 @@
 [
   {
     "prompt_inputs": {
-      "height": "175 cm",
-      "weight": "68 kg",
-      "goal": "Marathon training fuel: high carbohydrate intake to support long training runs with adequate protein for muscle recovery",
-      "restrictions": "Strictly vegan: no meat, fish, eggs, dairy, honey, or other animal-derived ingredients"
+      "height": "165 cm",
+      "weight": "92 kg",
+      "goal": "Lean muscle gain",
+      "restrictions": "Gluten-free and dairy-free"
     },
     "solution_criteria": [
-      "Contains no animal products (meat, fish, eggs, dairy, honey, or derivatives)",
-      "Provides high carbohydrate content appropriate for endurance training",
-      "Includes a meaningful protein source at each main meal",
-      "Is presented as a compact one-day meal plan"
+      "Provides a single-day meal plan with meals and approximate portions for one athlete",
+      "Prioritizes high protein content across the day's meals",
+      "Contains no gluten-containing or dairy ingredients"
     ],
     "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-    "scenario": "Vegan endurance runner (height 175 cm, weight 68 kg, goal: marathon training fuel) testing whether the meal plan excludes all animal products while meeting high carbohydrate and protein needs."
+    "scenario": "Strength-focused powerlifter (height 165 cm, weight 92 kg, goal: lean muscle gain) with a gluten-free and dairy-free restriction tests whether the plan prioritizes high protein while avoiding both restricted ingredients."
   },
   {
     "prompt_inputs": {
       "height": "150 cm",
       "weight": "45 kg",
-      "goal": "Maintain current body weight during competition season while fueling training for a competitive gymnast",
-      "restrictions": "Tree-nut allergy; no tree nuts or nut-based ingredients (including almond, cashew, walnut, pecan, pistachio, hazelnut, almond milk, nut butters, and nut-based oils or flours)"
+      "goal": "Maintain current body weight while improving daily energy levels for training",
+      "restrictions": "Tree-nut allergy and shellfish allergy; avoid all tree nuts (including almonds, walnuts, cashews, pistachios, hazelnuts) and all shellfish (including shrimp, crab, lobster, and clams)"
     },
     "solution_criteria": [
-      "Plan contains no tree nuts or nut-derived ingredients (e.g., almond milk, nut butter, nut flour, pesto with pine nuts)",
-      "Portion sizes and total calories are scaled appropriately for a 45 kg, 150 cm athlete aiming to maintain weight",
-      "Plan is compact and covers a single day with breakfast, lunch, dinner, and snacks"
+      "Plan is a single day of meals (e.g., breakfast, lunch, dinner, and snacks) written compactly and concisely",
+      "Contains no tree nuts or shellfish or ingredients derived from them",
+      "Calorie and portion sizes are appropriate for a 150 cm, 45 kg athlete aiming to maintain weight while improving energy"
     ],
     "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-    "scenario": "Petite gymnast (height 150 cm, weight 45 kg, goal: maintain weight during competition season) with a tree-nut allergy, testing whether the plan scales portions to a light body mass and avoids nut-based ingredients entirely."
+    "scenario": "Lightweight gymnast (height 150 cm, weight 45 kg, goal: maintain weight while improving energy) with a tree-nut and shellfish allergy tests whether the plan stays compact, allergen-safe, and appropriate for a small body size."
   },
   {
     "prompt_inputs": {
-      "height": "180 cm",
-      "weight": "95 kg",
-      "goal": "Lean muscle gain",
-      "restrictions": "Gluten-free; avoid hidden gluten sources such as soy sauce, malt, barley, and wheat-based additives"
+      "height": "178 cm",
+      "weight": "70 kg",
+      "goal": "Marathon training with high carbohydrate needs; the plan should meet daily calorie and protein targets appropriate for a 70 kg endurance runner",
+      "restrictions": "Strictly vegan: no meat, fish, eggs, dairy, honey, or other animal-derived ingredients; plant-based foods only"
     },
     "solution_criteria": [
-      "Provides a compact one-day meal plan for a single athlete",
-      "Meal plan delivers high protein and calories suitable for lean muscle gain for a 180 cm, 95 kg powerlifter",
-      "Contains no gluten or hidden gluten sources (e.g., wheat, barley, malt, regular soy sauce)"
+      "Uses only plant-based foods with no animal-derived ingredients",
+      "Total daily calories and protein are stated and fall within a reasonable range for a 70 kg marathon trainee (roughly 2800-3500 kcal and 100-130 g protein)",
+      "Carbohydrate content is clearly high relative to protein and fat, consistent with marathon training needs",
+      "Plan is compact, organized as one day of meals with approximate portions"
     ],
     "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-    "scenario": "Strength-focused powerlifter (height 180 cm, weight 95 kg, goal: lean muscle gain) with a gluten-free restriction, testing whether the plan supplies high protein and calories while avoiding hidden gluten sources."
+    "scenario": "Vegan endurance runner (height 178 cm, weight 70 kg, goal: marathon training with high carbohydrate needs) tests whether the meal plan meets calorie and protein targets using only plant-based foods."
   }
 ]

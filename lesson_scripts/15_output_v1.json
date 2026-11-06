@@ -1,63 +1,63 @@
 [
   {
-    "output": "**Daily targets (estimate):**\n- Calories: about 3,000 kcal\n- Protein: about 170 g\n- Carbohydrates: about 350 g\n- Fat: about 80 g\n\n**Foods to eat:**\n- Protein: chicken, turkey, beef, fish, eggs, tofu, lentils, beans, milk, plain yogurt, cheese\n- Carbohydrates: rice, potatoes, quinoa, corn tortillas, oats labeled gluten-free, fruit\n- Fats: olive oil, avocado, nuts, seeds, nut butter\n- Vegetables: broccoli, spinach, peppers, carrots, tomatoes\n\n**Foods to avoid:**\n- Wheat, barley, rye, and malt\n- Bread, pasta, couscous, bulgur, seitan, and regular beer\n- Soy sauce. Use gluten-free tamari or coconut aminos instead.\n- Processed foods, sauces, and seasoning mixes unless the label says gluten-free\n\n**Meal pattern:**\n- Eat 4 to 5 meals per day.\n- Include a protein source at every meal.",
+    "output": "Eat lean protein, rice, potatoes, vegetables, fruit, nuts, and olive oil.",
     "test_case": {
       "prompt_inputs": {
-        "height": "180 cm",
-        "weight": "95 kg",
+        "height": "165 cm",
+        "weight": "92 kg",
         "goal": "Lean muscle gain",
-        "restrictions": "Gluten-free; avoid hidden gluten sources such as soy sauce, malt, barley, and wheat-based additives"
+        "restrictions": "Gluten-free and dairy-free"
       },
       "solution_criteria": [
-        "Provides a compact one-day meal plan for a single athlete",
-        "Meal plan delivers high protein and calories suitable for lean muscle gain for a 180 cm, 95 kg powerlifter",
-        "Contains no gluten or hidden gluten sources (e.g., wheat, barley, malt, regular soy sauce)"
+        "Provides a single-day meal plan with meals and approximate portions for one athlete",
+        "Prioritizes high protein content across the day's meals",
+        "Contains no gluten-containing or dairy ingredients"
       ],
       "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-      "scenario": "Strength-focused powerlifter (height 180 cm, weight 95 kg, goal: lean muscle gain) with a gluten-free restriction, testing whether the plan supplies high protein and calories while avoiding hidden gluten sources."
+      "scenario": "Strength-focused powerlifter (height 165 cm, weight 92 kg, goal: lean muscle gain) with a gluten-free and dairy-free restriction tests whether the plan prioritizes high protein while avoiding both restricted ingredients."
     },
     "score": 2,
-    "reasoning": "The solution gives macro and calorie totals and reasonable gluten-free food guidance, but it is a list of food categories and rules rather than a compact one-day meal plan. The extra_important_criteria require exact foods, portions, and timing for each meal, and none are provided. That is a mandatory violation, so the score must be 3 or lower."
+    "reasoning": "The solution is a single sentence listing food categories rather than a compact one-day meal plan. It fails the primary criterion of providing meals with approximate portions, and it lacks the mandatory elements of daily caloric total, macronutrient breakdown, and meals with exact foods, portions, and timing. Because mandatory requirements are violated, the score must be 3 or lower. The dietary restriction compliance is incidental rather than demonstrated through a plan, though no restricted ingredients are named."
   },
   {
-    "output": "**Daily energy:** about 1,800 to 2,200 kcal. Have a sports dietitian confirm the amount.\n\n**Each day, include:**\n\n- **Carbohydrates:** oats, rice, potatoes, bread, pasta, bananas, berries, other fruit\n- **Protein:** eggs, chicken, turkey, fish, lean beef, milk, plain yogurt, tofu, lentils, beans\n- **Fats:** olive oil, avocado, salmon or other fish, sunflower seeds, pumpkin seeds\n- **Vegetables and fruit:** at least 5 servings\n- **Fluids:** water\n\n**Sample day:**\n\n- **Breakfast:** oatmeal with milk, banana, and seeds; 1 boiled egg\n- **Snack:** yogurt with berries\n- **Lunch:** chicken, rice, and vegetables cooked in olive oil\n- **Snack:** bread with a little tuna or cheese, and fruit\n- **Dinner:** salmon, potatoes, and green beans\n- **Evening snack:** milk and a banana\n\n**Avoid:**\n\n- Pine nuts and coconut, which are tree nuts under many labeling rules\n- Foods labeled \"may contain tree nuts\" or \"made in a facility that processes tree nuts\"\n- Nut-based milks, nut oils, and nut flours",
+    "output": "Eat three meals a day and two snacks. Include a protein food at each meal. Choose whole grains, such as oats, brown rice, and whole wheat bread. Eat fruit and vegetables daily. Include fish such as salmon, cod, or tuna, along with eggs, chicken, beans, lentils, tofu, and dairy such as milk, yogurt, and cheese. Use seeds such as sunflower or pumpkin seeds for snacks, and olive oil for cooking. Avoid all tree nuts and all shellfish.",
     "test_case": {
       "prompt_inputs": {
         "height": "150 cm",
         "weight": "45 kg",
-        "goal": "Maintain current body weight during competition season while fueling training for a competitive gymnast",
-        "restrictions": "Tree-nut allergy; no tree nuts or nut-based ingredients (including almond, cashew, walnut, pecan, pistachio, hazelnut, almond milk, nut butters, and nut-based oils or flours)"
+        "goal": "Maintain current body weight while improving daily energy levels for training",
+        "restrictions": "Tree-nut allergy and shellfish allergy; avoid all tree nuts (including almonds, walnuts, cashews, pistachios, hazelnuts) and all shellfish (including shrimp, crab, lobster, and clams)"
       },
       "solution_criteria": [
-        "Plan contains no tree nuts or nut-derived ingredients (e.g., almond milk, nut butter, nut flour, pesto with pine nuts)",
-        "Portion sizes and total calories are scaled appropriately for a 45 kg, 150 cm athlete aiming to maintain weight",
-        "Plan is compact and covers a single day with breakfast, lunch, dinner, and snacks"
+        "Plan is a single day of meals (e.g., breakfast, lunch, dinner, and snacks) written compactly and concisely",
+        "Contains no tree nuts or shellfish or ingredients derived from them",
+        "Calorie and portion sizes are appropriate for a 150 cm, 45 kg athlete aiming to maintain weight while improving energy"
       ],
       "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-      "scenario": "Petite gymnast (height 150 cm, weight 45 kg, goal: maintain weight during competition season) with a tree-nut allergy, testing whether the plan scales portions to a light body mass and avoids nut-based ingredients entirely."
+      "scenario": "Lightweight gymnast (height 150 cm, weight 45 kg, goal: maintain weight while improving energy) with a tree-nut and shellfish allergy tests whether the plan stays compact, allergen-safe, and appropriate for a small body size."
     },
     "score": 2,
-    "reasoning": "The solution violates mandatory requirements that the output include a daily caloric total, a macronutrient breakdown, and meals with exact foods, portions, and timing. It gives only a calorie range with a suggestion to consult a dietitian, omits macros entirely, and lists foods without quantities or times. Tree-nut compliance and compactness are adequate, but the mandatory failures cap the score at 3 or lower."
+    "reasoning": "The solution fails the core task, which asks for a one-day meal plan. It offers generic guidance instead of meals with exact foods, portions, and timing. It also omits the mandatory daily caloric total and macronutrient breakdown, and gives no portion sizes. Because mandatory requirements are violated, the score must be 3 or lower. It avoids allergens, which keeps it from being worse."
   },
   {
-    "output": "**Daily targets (68 kg):**\n- Carbohydrate: 6 to 8 g per kg, about 410 to 540 g per day\n- Protein: 1.6 to 2.0 g per kg, about 110 to 135 g per day\n- Fat: about 70 to 95 g per day\n- Total energy: about 2,800 to 3,300 kcal, with more on long run days\n\n**Food sources:**\n- Carbohydrate: oats, rice, pasta, bread, potatoes, sweet potatoes, bananas, dates, raisins, quinoa, corn, lentils, beans, fruit juice\n- Protein: tofu, tempeh, seitan, lentils, chickpeas, black beans, edamame, soy milk, peanut butter, pea protein powder, hemp seeds\n- Fat: nuts, seeds, avocado, olive oil, chia seeds, flaxseed, walnuts\n\n**Example day:**\n- Breakfast: oatmeal cooked in soy milk, with banana, peanut butter, and berries\n- Lunch: rice bowl with tofu, black beans, vegetables, and avocado\n- Snack: whole grain bread with hummus and dried fruit\n- Dinner: pasta with lentil tomato sauce, spinach, and edamame\n- Before or after a run: banana, dates, or a sports drink\n- After a run: smoothie with pea protein powder, soy milk, and fruit\n\n**Nutrients to watch:**\n- Vitamin B12: take a supplement, because it is not found reliably in plant foods\n- Vitamin D: take a supplement, especially in winter\n- Iron: lentils, tofu, pumpkin seeds, and spinach, eaten with vitamin C foods such as citrus or peppers\n- Calcium: soy milk and tofu made with calcium, leafy greens, and almonds\n- Omega-3 fat: flaxseed, chia seeds, walnuts, or algae oil",
+    "output": "Eat plant-based foods with high carbohydrate and adequate protein. Daily targets for this person are roughly 3,000 to 3,500 kcal, about 110 to 130 g protein, and 7 to 8 g carbohydrate per kg body weight (about 490 to 560 g) on heavy training days.\n\nMain sources:\n- Carbohydrates: oats, rice, quinoa, potatoes, whole-grain bread and pasta, bananas, dates, raisins, fruit juice, lentils, beans\n- Protein: tofu, tempeh, seitan, lentils, chickpeas, black beans, soy milk, edamame, peanut butter, hemp seeds, pea protein powder\n- Fats: avocado, olive oil, nuts, seeds, nut butters\n- Iron, calcium, B12, vitamin D: fortified soy milk or other fortified plant milk, fortified cereals, leafy greens, pumpkin seeds. Take a B12 supplement, since B12 is not reliably found in plant foods. Consider a vitamin D supplement, especially in winter.\n\nSample day:\n- Breakfast: oatmeal cooked in soy milk, banana, peanut butter, berries\n- Snack: whole-grain bread with hummus, or a fruit smoothie with pea protein\n- Lunch: quinoa or rice bowl with black beans, roasted vegetables, avocado\n- Pre-run snack: bagel or rice cakes with jam, or a banana\n- Dinner: tofu or tempeh stir-fry with rice or noodles and vegetables\n- Evening: soy yogurt alternative with fruit, or a handful of nuts\n\nSpread protein across meals, about 20 to 30 g per meal. Refuel with carbohydrate and some protein within 60 minutes after long runs. Consult a sports dietitian to adjust amounts to the individual's actual training load.",
     "test_case": {
       "prompt_inputs": {
-        "height": "175 cm",
-        "weight": "68 kg",
-        "goal": "Marathon training fuel: high carbohydrate intake to support long training runs with adequate protein for muscle recovery",
-        "restrictions": "Strictly vegan: no meat, fish, eggs, dairy, honey, or other animal-derived ingredients"
+        "height": "178 cm",
+        "weight": "70 kg",
+        "goal": "Marathon training with high carbohydrate needs; the plan should meet daily calorie and protein targets appropriate for a 70 kg endurance runner",
+        "restrictions": "Strictly vegan: no meat, fish, eggs, dairy, honey, or other animal-derived ingredients; plant-based foods only"
       },
       "solution_criteria": [
-        "Contains no animal products (meat, fish, eggs, dairy, honey, or derivatives)",
-        "Provides high carbohydrate content appropriate for endurance training",
-        "Includes a meaningful protein source at each main meal",
-        "Is presented as a compact one-day meal plan"
+        "Uses only plant-based foods with no animal-derived ingredients",
+        "Total daily calories and protein are stated and fall within a reasonable range for a 70 kg marathon trainee (roughly 2800-3500 kcal and 100-130 g protein)",
+        "Carbohydrate content is clearly high relative to protein and fat, consistent with marathon training needs",
+        "Plan is compact, organized as one day of meals with approximate portions"
       ],
       "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-      "scenario": "Vegan endurance runner (height 175 cm, weight 68 kg, goal: marathon training fuel) testing whether the meal plan excludes all animal products while meeting high carbohydrate and protein needs."
+      "scenario": "Vegan endurance runner (height 178 cm, weight 70 kg, goal: marathon training with high carbohydrate needs) tests whether the meal plan meets calorie and protein targets using only plant-based foods."
     },
     "score": 3,
-    "reasoning": "The solution satisfies the vegan restriction and the carbohydrate and protein criteria, and it is compact. However, the extra mandatory requirement demands exact foods, portions, and timing, plus a daily caloric total and a macronutrient breakdown. The example day lists foods without any portion sizes, gives only a calorie range, and offers no concrete meal timing, so it violates a mandatory requirement and must score 3 or lower."
+    "reasoning": "The solution meets the vegan restriction and gives reasonable macro targets, but the mandatory output requirements are violated. It states target ranges rather than a daily caloric total and macronutrient breakdown for the actual meal plan, and the sample day lacks portions and exact timing. Because a mandatory requirement is violated, the score must be 3 or lower."
   }
 ]
