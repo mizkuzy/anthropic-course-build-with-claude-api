@@ -9,7 +9,7 @@ def add_assistant_message(messages, text):
 def chat(client, model, messages, system=None, stream=False):
     params = {
         "model": model,
-        "max_tokens": 1000,
+        "max_tokens": 4000,
         "messages": messages,
         "stream": stream,
     }
