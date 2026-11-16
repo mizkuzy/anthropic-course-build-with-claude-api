@@ -18,14 +18,26 @@ multi-shot prompting.
 'Plan 9 from Outer Space'» выглядит позитивным, но это сарказм: «Plan 9» —
 один из самых плохих фильмов в истории. Твит негативный.
 
-Решение — добавить в prompt примеры:
-- обычный позитивный: «Great game tonight!» → «Positive»;
-- саркастичный: «Oh yeah, I really needed a flight delay tonight!
-  Excellent!» → «Negative»;
-- объяснение, что к сарказму нужно относиться внимательно.
+Решение — добавить в prompt примеры: обычный позитивный, саркастичный и
+объяснение, что к сарказму нужно относиться внимательно. Каждый пример
+обёрнут в XML-теги `<sample_input>` и `<ideal_output>`, чтобы Claude видел,
+где вход, а где ответ:
 
-Примеры обёрнуты в XML-теги `<sample_input>` и `<ideal_output>`, чтобы
-Claude видел, где вход, а где ответ.
+```
+<sample_input>
+Great game tonight!
+</sample_input>
+<ideal_output>
+Positive
+</ideal_output>
+
+<sample_input>
+Oh yeah, I really needed a flight delay tonight! Excellent!
+</sample_input>
+<ideal_output>
+Negative
+</ideal_output>
+```
 
 ### Когда использовать
 
