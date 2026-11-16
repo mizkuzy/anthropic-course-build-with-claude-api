@@ -48,7 +48,7 @@ https://academy.claude.com/courses/building-with-the-claude-api
 - Jupyter запускать во вкладке терминала: `source .venv/bin/activate &&
   jupyter notebook --no-browser`. Токен вставляет пользователь.
 
-## Работа
+## Как мы работаем
 
 - Кратко, простыми словами, по-русски. Несколько шагов — по одному.
 - Делать только то, что попросили; о лишних изменениях спрашивать.
