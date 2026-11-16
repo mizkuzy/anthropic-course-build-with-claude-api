@@ -49,3 +49,10 @@ get_current_datetime("%H:%M")  # "14:30"
 
 Функция — только первый шаг. Дальше пишем JSON schema, которая описывает
 функцию для Claude, и подключаем её к чату.
+
+### Что мы поменяли
+
+Для проекта напоминаний создали папку `lesson_scripts/reminders/`.
+Функцию `get_current_datetime` положили в
+[tools.py](../../lesson_scripts/reminders/tools.py), чтобы переиспользовать
+в следующих уроках.
