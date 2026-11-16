@@ -67,9 +67,7 @@ Negative
 [пример ответа]
 </ideal_output>
 
-This example is well-structured, provides detailed information
-on food choices and quantities, and aligns with the athlete's
-goals and restrictions.
+This example is well-structured, provides detailed information on food choices and quantities, and aligns with the athlete's goals and restrictions.
 ```
 
 Так Claude понимает не только формат, но и почему ответ хороший.
