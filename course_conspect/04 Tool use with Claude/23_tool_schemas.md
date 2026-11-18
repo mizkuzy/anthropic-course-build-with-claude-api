@@ -32,7 +32,8 @@ Schema не нужно писать вручную, её может написа
 
 1. Скопировать код функции.
 2. Попросить Claude написать JSON schema для tool calling.
-3. Приложить документацию Anthropic по tool use.
+3. Приложить документацию Anthropic по tool use:
+   https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview
 
 Пример prompt: «Write a valid JSON schema spec for the purposes of tool
 calling for this function. Follow the best practices listed in the attached
