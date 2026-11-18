@@ -120,3 +120,15 @@ def run_tool(tool_name, tool_input):
 
 История сообщений хранит весь контекст, поэтому Claude может опираться на
 результаты прошлых tools и дать полный ответ.
+
+### Код проекта
+
+Цикл диалога `run_conversation` лежит в
+[helpers.py](../../lesson_scripts/reminders/helpers.py), функции `run_tool`
+и `run_tools` — в [tools.py](../../lesson_scripts/reminders/tools.py).
+
+### Что мы поменяли
+
+`run_conversation` принимает аргументами `client`, `model`, список tools
+и `thinking`, как наш `chat`. В уроке они берутся из notebook, а список
+tools записан внутри цикла.
