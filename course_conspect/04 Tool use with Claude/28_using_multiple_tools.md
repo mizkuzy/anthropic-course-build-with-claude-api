@@ -4,6 +4,8 @@
 
 Ссылка: https://academy.claude.com/courses/building-with-the-claude-api/using-multiple-tools
 
+Notebook: [28_using_multiple_tools.ipynb](../../lesson_scripts/reminders/28_using_multiple_tools.ipynb)
+
 ### Главное
 
 Когда основной код для tools готов, новые tools добавлять просто.
