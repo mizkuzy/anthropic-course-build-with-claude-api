@@ -33,5 +33,5 @@ def chat(client, model, messages, system=None, tools=None, thinking=None):
 
 def text_from_message(message):
     return "\n".join(
-        block.text for block in message.content if block.type == "text"
+        [block.text for block in message.content if block.type == "text"]
     )
