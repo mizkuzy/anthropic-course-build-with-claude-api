@@ -22,7 +22,8 @@
 
 ### Tools в цикле диалога
 
-В `run_conversation` добавляем новые schemas в список `tools`:
+В уроке список tools записан внутри `run_conversation`, поэтому новые
+schemas добавляют в её код:
 
 ```python
 response = chat(messages, tools=[
@@ -85,3 +86,16 @@ tools.
 
 Существующий код менять не нужно: новый tool работает с тем же циклом
 диалога и обработкой tools.
+
+### Что мы поменяли
+
+У нас `run_conversation` получает список tools аргументом, её код менять
+не нужно. Все три schemas передаём при вызове:
+
+```python
+run_conversation(client, model, messages, tools=[
+    get_current_datetime_schema,
+    add_duration_to_datetime_schema,
+    set_reminder_schema,
+])
+```
