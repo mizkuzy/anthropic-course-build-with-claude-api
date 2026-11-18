@@ -45,6 +45,11 @@ Schema кладём рядом с функцией. Имя — `<имя функ
 видеть, к какой функции она относится:
 
 ```python
+def get_current_datetime(date_format="%Y-%m-%d %H:%M:%S"):
+    if not date_format:
+        raise ValueError("date_format cannot be empty")
+    return datetime.now().strftime(date_format)
+
 get_current_datetime_schema = {
     "name": "get_current_datetime",
     "description": "Returns the current date and time formatted according to the specified format",
