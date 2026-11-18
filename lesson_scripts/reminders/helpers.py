@@ -16,7 +16,7 @@ def add_assistant_message(messages, message):
 def chat(client, model, messages, system=None, tools=None, thinking=None):
     params = {
         "model": model,
-        "max_tokens": 4000,
+        "max_tokens": 1000,
         "messages": messages,
     }
     # API не принимает None, поэтому добавляем только заданные параметры
