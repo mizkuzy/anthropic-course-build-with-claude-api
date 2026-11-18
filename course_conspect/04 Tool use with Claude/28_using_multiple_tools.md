@@ -81,7 +81,8 @@ tools.
 
 1. Написать функцию tool.
 2. Написать её schema.
-3. Добавить schema в список `tools` в `run_conversation`.
+3. Добавить schema в список `tools` в `run_conversation` (у нас — в список
+   `tools` при вызове `run_conversation`).
 4. Добавить вызов функции в `run_tool`.
 
 Существующий код менять не нужно: новый tool работает с тем же циклом
