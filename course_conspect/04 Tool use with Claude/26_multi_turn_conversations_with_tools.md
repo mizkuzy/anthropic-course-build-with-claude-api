@@ -113,7 +113,7 @@ tools.
 ### Код проекта
 
 Helper-функции проекта напоминаний лежат в
-[helpers.py](../../lesson_scripts/reminders/helpers.py).
+[tools.py](../../lesson_scripts/reminders/tools.py), вместе с tools.
 
 ### Что мы поменяли
 

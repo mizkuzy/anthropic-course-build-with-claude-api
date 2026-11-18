@@ -123,9 +123,8 @@ def run_tool(tool_name, tool_input):
 
 ### Код проекта
 
-Цикл диалога `run_conversation` лежит в
-[helpers.py](../../lesson_scripts/reminders/helpers.py), функции `run_tool`
-и `run_tools` — в [tools.py](../../lesson_scripts/reminders/tools.py).
+Цикл диалога `run_conversation` и функции `run_tool`, `run_tools` лежат в
+[tools.py](../../lesson_scripts/reminders/tools.py).
 
 ### Что мы поменяли
 
