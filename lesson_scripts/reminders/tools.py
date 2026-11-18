@@ -13,8 +13,8 @@ get_current_datetime_schema = ToolParam(
     {
         "name": "get_current_datetime",
         "description": (
-            "Returns the current date and time formatted according to "
-            "the specified format"
+            "Returns the current date and time "
+            "formatted according to the specified format."
         ),
         "input_schema": {
             "type": "object",
@@ -22,8 +22,9 @@ get_current_datetime_schema = ToolParam(
                 "date_format": {
                     "type": "string",
                     "description": (
-                        "A string specifying the format of the returned "
-                        "datetime. Uses Python's strftime format codes."
+                        "A string specifying the format "
+                        "of the returned datetime. "
+                        "Uses Python's strftime format codes."
                     ),
                     "default": "%Y-%m-%d %H:%M:%S",
                 }
@@ -52,13 +53,13 @@ add_duration_to_datetime_schema = ToolParam(
     {
         "name": "add_duration_to_datetime",
         "description": (
-            "Adds a duration to a date and time and returns the result "
-            "with the day of the week, formatted as "
-            "'Weekday, YYYY-MM-DD HH:MM:SS'. Use it whenever you need a "
-            "date or time in the future or the past, instead of "
-            "calculating it yourself. A negative duration subtracts "
-            "time. Months and years are not supported: convert them "
-            "to days."
+            "Adds a duration to a date and time. "
+            "Returns the result with the day of the week, "
+            "formatted as 'Weekday, YYYY-MM-DD HH:MM:SS'. "
+            "Use it whenever you need a date in the future or the past, "
+            "instead of calculating it yourself. "
+            "A negative duration subtracts time. "
+            "Months and years are not supported: convert them to days."
         ),
         "input_schema": {
             "type": "object",
@@ -66,13 +67,13 @@ add_duration_to_datetime_schema = ToolParam(
                 "datetime_str": {
                     "type": "string",
                     "description": (
-                        "The starting date and time, written in "
-                        "input_format, e.g. '2050-01-01 00:00:00'."
+                        "The starting date and time in input_format, "
+                        "e.g. '2050-01-01 00:00:00'."
                     ),
                 },
                 "duration": {
                     "type": "number",
-                    "description": ("How many units to add. Can be negative."),
+                    "description": "How many units to add. Can be negative.",
                 },
                 "unit": {
                     "type": "string",
@@ -82,8 +83,8 @@ add_duration_to_datetime_schema = ToolParam(
                 "input_format": {
                     "type": "string",
                     "description": (
-                        "The format of datetime_str. Uses Python's "
-                        "strptime format codes."
+                        "The format of datetime_str. "
+                        "Uses Python's strptime format codes."
                     ),
                     "default": "%Y-%m-%d %H:%M:%S",
                 },
@@ -108,11 +109,12 @@ set_reminder_schema = ToolParam(
     {
         "name": "set_reminder",
         "description": (
-            "Sets a reminder that will notify the user at the given date "
-            "and time. Use it when the user asks to be reminded about "
-            "something. The timestamp must be an exact date and time: "
-            "calculate it first with add_duration_to_datetime if the "
-            "user gives a relative time. Returns a confirmation message."
+            "Sets a reminder for the user at the given date and time. "
+            "Use it when the user asks to be reminded about something. "
+            "The timestamp must be an exact date and time: "
+            "if the user gives a relative time, "
+            "calculate it first with add_duration_to_datetime. "
+            "Returns a confirmation message."
         ),
         "input_schema": {
             "type": "object",
@@ -120,8 +122,8 @@ set_reminder_schema = ToolParam(
                 "content": {
                     "type": "string",
                     "description": (
-                        "What to remind the user about, e.g. "
-                        "'Doctor's appointment'."
+                        "What to remind the user about, "
+                        "e.g. 'Doctor's appointment'."
                     ),
                 },
                 "timestamp": {
